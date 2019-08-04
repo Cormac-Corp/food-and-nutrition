@@ -81,4 +81,4 @@ mutation {
 ```
 If this successfully fires and logs you out, you will get a 200 status code. Also your token will no longer work.
 ## All Methods
-To see the all the methods you can run, visit the API Documentation.
+To see the all the methods you can run, visit the [API Documentation](https://cormac-corp.github.io/Food-and-Nutrition-API/api).
