@@ -1,9 +1,17 @@
-## Welcome to the Food and Nutrition Public API
+## Overview of Food and Nutrition Public API
+Food and Nutrition 1.0 from CORMAC is an API that returns the associated herb and the nearest farmers market based on zip code when you query it using a condition suchas Blood Pressure or Diabetes
+
 
 ### Accessing the API
-If you want to run queries to the API, go to [http://ec2-3-89-177-3.compute-1.amazonaws.com/playground](http://ec2-3-89-177-3.compute-1.amazonaws.com/playground). This takes you to GraphQL Playground, an in-browser IDE for running GraphQL Queries
+To run queries on the API, GOTO
 
-If you are trying to build a frontend (like Apollo Client) or something that makes calls to the API programmatically, the endpoint is [http://ec2-3-89-177-3.compute-1.amazonaws.com/graphql](http://ec2-3-89-177-3.compute-1.amazonaws.com/graphql)
+http://ec2-3-89-177-3.compute-1.amazonaws.com/playground
+
+This takes you to GraphQL Playground, an in-browser IDE for running GraphQL Queries
+
+If you are trying to build a frontend (like Apollo Client) or making calls to the API programmatically, the endpoint is 
+http://ec2-3-89-177-3.compute-1.amazonaws.com/graphql
+
 
 ### Creating a user
 In order to fetch data from the API, you must be authenticated. To get a token, you first have to create an account, to create a user account, run the following query
