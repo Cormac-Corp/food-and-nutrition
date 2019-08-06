@@ -39,7 +39,7 @@ to authenticate requests
         "user": {
           "_id": "5245b4d5debdeedc67d3f833"
         },
-        "token": "eyJhbGciOeJIUzI1NiIsInR5cCI6IkpXVCf9.eyJfdWQiOiIsZDQ1YjRkNTllYmRlZTBjNjdkMzk4MzMiLCJpYXQiOjE1NjQ4NDkzNjs9.Li_s6ZL6Bs__buQiuUcDU4FBgTcpu7dpN1CaStBONhk"
+        "token": "eyJhbGciOeJIUzI1NiIsInR5cCI6IkpXVCf9.eyJfdWQiOiIsZYmRlZTBjNjdkMzk4MzMiLCJpYXQiOjE1NjQ4NDkzNjs9.Li_s6ZL6Bs__buQiuUcDU4FBgTcpu7dpN1CaStBONhk"
     }
   }
 }
@@ -49,12 +49,26 @@ Each time you make a request to the api, you need to create an HTTP Header calle
 So, if you are in the GraphQL Playground, you would click the button that says `HTTP Headers`  and in it, you would put the following json:
 ```json
 {
-	"Authorization":"Bearer (token goes here)"
+	"Authorization":"Bearer token goes here"
 }
 ```
 > Note: The whitespace between `Bearer` and your token is important.
 
 Now you have created a user and and you are authenticated. You can now fetch data from the API
+
+### Returning Users
+If you have already created a user previously and you do not have the key then you can get the key using the email and password using the following method
+
+```graphql
+mutation {
+        login(data: {
+                email:"name@example.com"
+                password:"password"
+        }) {
+                token
+        }
+}
+```
 
 ### Fetching Data
 There are two queries that you can use to fetch data from the API. Both of them require you to be authenticated.
@@ -80,7 +94,7 @@ query {
 }
 ```
 ### Logging Out
-Once you are done using the API, you will want to logout. The proess is very simple. You must be authenticated for this by checking your HTTP Headers for your token. In order to logout, run the following mutation
+Once you are done using the API, you will want to logout. The process is very simple. You must be authenticated for this by checking your HTTP Headers for your token. In order to logout, run the following mutation
 
 ```graphql
 mutation {
